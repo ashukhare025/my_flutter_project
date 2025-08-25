@@ -6,6 +6,8 @@ import 'package:my_project/whatsapp_series/home_page_screen.dart';
 import 'package:my_project/widget/uihelper.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
