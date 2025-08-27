@@ -1,8 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+import 'contact_us.dart';
 import 'create_event.dart';
 import 'dj_profile.dart';
+import 'song_request.dart';
 
 class MyEventScreen extends StatelessWidget {
   const MyEventScreen({super.key});
@@ -11,6 +13,7 @@ class MyEventScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF14BBC6),
         leading: Builder(
           builder: (context) {
             return IconButton(
@@ -119,7 +122,12 @@ class MyEventScreen extends StatelessWidget {
                   color: Color(0xFFFFFFFF),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SongRequest()),
+                );
+              },
             ),
             Divider(thickness: 0),
             ListTile(
@@ -150,7 +158,12 @@ class MyEventScreen extends StatelessWidget {
                   color: Color(0xFFFFFFFF),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ContactUs()),
+                );
+              },
             ),
             Divider(thickness: 0),
             ListTile(
@@ -226,7 +239,7 @@ class MyEventScreen extends StatelessWidget {
                   Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 10, top: 120),
+                        padding: EdgeInsets.only(left: 10, top: 120),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(

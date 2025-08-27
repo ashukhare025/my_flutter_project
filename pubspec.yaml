@@ -80,9 +80,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: AntonSC
-    - fonts:
-        - asset: assets/fonts/AntonSC-Regular.ttf
+   # - family: AntonSC
+   # - fonts:
+    #    - asset: assets/fonts/AntonSC-Regular.ttf
     - family: FontMain
     - fonts:
         - asset: assets/fonts/Comfortaa-Bold.ttf
