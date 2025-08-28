@@ -24,8 +24,23 @@ class DjLoginPage extends StatelessWidget {
   }
 }
 
-class DjLoginScreen extends StatelessWidget {
+class DjLoginScreen extends StatefulWidget {
   const DjLoginScreen({super.key});
+
+  @override
+  State<DjLoginScreen> createState() => _DjLoginScreenState();
+}
+
+class _DjLoginScreenState extends State<DjLoginScreen> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,36 +78,30 @@ class DjLoginScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.all(5),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  controller: emailController,
                   decoration: InputDecoration(
-                    labelText: '  Email',
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(22),
-                    ),
-                    labelStyle: TextStyle(
-                      color: Color(0XFF383838),
-                      fontFamily: 'FontMain',
-                      fontWeight: FontWeight.w700,
+                    hintText: 'Email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                     filled: true,
                     fillColor: Color(0xFFFFFFFF),
                   ),
                 ),
               ),
+              SizedBox(height: 5),
               Padding(
-                padding: const EdgeInsets.all(5),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
-                    labelText: '  Password',
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(22),
-                    ),
-                    labelStyle: TextStyle(
-                      color: Color(0XFF383838),
-                      fontFamily: 'FontMain',
-                      fontWeight: FontWeight.w700,
+                    hintText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(30),
                     ),
                     filled: true,
                     fillColor: Color(0xFFFFFFFF),
@@ -164,7 +173,7 @@ class DjLoginScreen extends StatelessWidget {
                         color: Color(0XFFFFFFFF),
                         fontWeight: FontWeight.w400,
                         fontFamily: 'FontMain',
-                        fontSize: 16,
+                        fontSize: 14,
                       ),
                     ),
                   ),

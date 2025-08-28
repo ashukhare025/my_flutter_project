@@ -323,7 +323,6 @@ class _SignUpTv extends State<SignUpTv> {
                         },
                       );
                     },
-
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
