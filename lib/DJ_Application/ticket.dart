@@ -240,70 +240,6 @@ class Ticket extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SizedBox(height: 60),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    ClipRRect(
-                      child: Image.asset(
-                        'assets/DJ/stranger.jpg',
-                        width: 150,
-                        height: 150,
-                      ),
-                    ),
-                    SizedBox(width: 8),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              UiHelper.CustomText(
-                                text: 'Ticket ID: 2563659',
-                                height: 22,
-                                fontweight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                              SizedBox(height: 10),
-                              Row(
-                                children: [
-                                  Column(
-                                    children: [
-                                      UiHelper.CustomText(
-                                        text: 'Email: jeane@beatfusion.com',
-                                        height: 16,
-                                        color: Colors.white,
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-
-                              SizedBox(height: 8),
-                              UiHelper.CustomText(
-                                text: 'Message: lorem ipsum dolor sit amet',
-                                height: 12,
-                                color: Colors.white,
-                              ),
-                              UiHelper.CustomText(
-                                text:
-                                    'consectetur adipiscing elit.Donec quis arci a',
-                                height: 12,
-                                color: Colors.white,
-                              ),
-                              UiHelper.CustomText(
-                                text: 'sem pretium eleifend',
-                                height: 12,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
                 SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -311,8 +247,8 @@ class Ticket extends StatelessWidget {
                     ClipRRect(
                       child: Image.asset(
                         'assets/DJ/stranger.jpg',
-                        width: 150,
-                        height: 150,
+                        width: 130,
+                        height: 130,
                       ),
                     ),
                     SizedBox(width: 8),
@@ -325,7 +261,7 @@ class Ticket extends StatelessWidget {
                             children: [
                               UiHelper.CustomText(
                                 text: 'Ticket ID: 2563659',
-                                height: 22,
+                                height: 18,
                                 fontweight: FontWeight.bold,
                                 color: Colors.white,
                               ),
@@ -336,7 +272,7 @@ class Ticket extends StatelessWidget {
                                     children: [
                                       UiHelper.CustomText(
                                         text: 'Email: jeane@beatfusion.com',
-                                        height: 16,
+                                        height: 12,
                                         color: Colors.white,
                                       ),
                                     ],
@@ -347,18 +283,18 @@ class Ticket extends StatelessWidget {
                               SizedBox(height: 8),
                               UiHelper.CustomText(
                                 text: 'Message: lorem ipsum dolor sit amet',
-                                height: 12,
+                                height: 9,
                                 color: Colors.white,
                               ),
                               UiHelper.CustomText(
                                 text:
                                     'consectetur adipiscing elit.Donec quis arci a',
-                                height: 12,
+                                height: 9,
                                 color: Colors.white,
                               ),
                               UiHelper.CustomText(
                                 text: 'sem pretium eleifend',
-                                height: 12,
+                                height: 9,
                                 color: Colors.white,
                               ),
                             ],
@@ -368,15 +304,79 @@ class Ticket extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 40),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      child: Image.asset(
+                        'assets/DJ/stranger.jpg',
+                        width: 120,
+                        height: 120,
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              UiHelper.CustomText(
+                                text: 'Ticket ID: 2563659',
+                                height: 18,
+                                fontweight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                              SizedBox(height: 5),
+                              Row(
+                                children: [
+                                  Column(
+                                    children: [
+                                      UiHelper.CustomText(
+                                        text: 'Email: jeane@beatfusion.com',
+                                        height: 12,
+                                        color: Colors.white,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+
+                              SizedBox(height: 5),
+                              UiHelper.CustomText(
+                                text: 'Message: lorem ipsum dolor sit amet',
+                                height: 9,
+                                color: Colors.white,
+                              ),
+                              UiHelper.CustomText(
+                                text:
+                                    'consectetur adipiscing elit.Donec quis arci a',
+                                height: 9,
+                                color: Colors.white,
+                              ),
+                              UiHelper.CustomText(
+                                text: 'sem pretium eleifend',
+                                height: 9,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 70,
-                          vertical: 15,
+                          horizontal: 65,
+                          vertical: 10,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -387,7 +387,7 @@ class Ticket extends StatelessWidget {
                       child: Text(
                         "Reply",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 11,
                           fontFamily: 'FontMain',
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFFFFFFF),
@@ -397,8 +397,8 @@ class Ticket extends StatelessWidget {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 45,
-                          vertical: 15,
+                          horizontal: 35,
+                          vertical: 10,
                         ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -409,7 +409,7 @@ class Ticket extends StatelessWidget {
                       child: Text(
                         "Ticket Resolve",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 11,
                           fontFamily: 'FontMain',
                           fontWeight: FontWeight.bold,
                           color: Color(0xFFFFFFFF),

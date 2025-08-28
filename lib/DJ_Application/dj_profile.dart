@@ -36,13 +36,13 @@ class DjProfile extends StatelessWidget {
                   Stack(
                     children: [
                       CircleAvatar(
-                        radius: 120,
+                        radius: 60,
                         backgroundColor: Colors.white,
                         backgroundImage: AssetImage('assets/DJ/gamer.png'),
                       ),
                       Positioned(
-                        bottom: 10,
-                        right: 10,
+                        bottom: 0,
+                        right: 0,
                         child: Container(
                           padding: EdgeInsets.all(6),
                           decoration: BoxDecoration(
@@ -51,7 +51,7 @@ class DjProfile extends StatelessWidget {
                           ),
                           child: Icon(
                             Icons.camera_alt_outlined,
-                            size: 40,
+                            size: 30,
                             color: Colors.black,
                           ),
                         ),
@@ -59,10 +59,10 @@ class DjProfile extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(height: 50),
+                  SizedBox(height: 30),
                   Column(
                     children: [
-                      SizedBox(height: 15),
+                      SizedBox(height: 10),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
@@ -80,7 +80,7 @@ class DjProfile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
@@ -99,7 +99,7 @@ class DjProfile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
@@ -118,7 +118,7 @@ class DjProfile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 10),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
@@ -137,11 +137,11 @@ class DjProfile extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 25),
+                      SizedBox(height: 20),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.symmetric(
-                            horizontal: 130,
+                            horizontal: 110,
                             vertical: 15,
                           ),
                           backgroundColor: Colors.blue.shade900,
@@ -153,13 +153,13 @@ class DjProfile extends StatelessWidget {
                         child: Text(
                           'Update Profile',
                           style: TextStyle(
-                            fontSize: 15,
+                            fontSize: 13,
                             fontFamily: 'FontMain',
                             color: Colors.white,
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 8),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -197,7 +197,7 @@ class DjProfile extends StatelessWidget {
                                               "Change Password",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 22,
+                                                fontSize: 18,
                                                 color: Colors.white,
                                               ),
                                             ),
@@ -276,7 +276,7 @@ class DjProfile extends StatelessWidget {
                             child: Text(
                               "Update Password",
                               style: TextStyle(
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),

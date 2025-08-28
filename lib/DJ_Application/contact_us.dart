@@ -6,6 +6,7 @@ import 'package:my_project/widget/uihelper.dart';
 import 'create_event.dart';
 import 'dj_profile.dart';
 import 'my_event_list.dart';
+import 'plan.dart';
 import 'song_request.dart';
 import 'ticket.dart';
 
@@ -115,7 +116,12 @@ class ContactUs extends StatelessWidget {
                   color: Color(0xFFFFFFFF),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Plan()),
+                );
+              },
             ),
             Divider(thickness: 0),
             ListTile(
@@ -241,38 +247,38 @@ class ContactUs extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 35),
+                  SizedBox(height: 10),
                   UiHelper.CustomText(
                     text: 'Don’t hesitate to contact us whether you',
-                    height: 16,
+                    height: 14,
                     color: Color(0xFFFFFFFF),
                     fontweight: FontWeight.bold,
                   ),
                   UiHelper.CustomText(
                     text: 'have a suggestion on our improvement,',
-                    height: 16,
+                    height: 14,
                     color: Color(0xFFFFFFFF),
                     fontweight: FontWeight.bold,
                   ),
                   UiHelper.CustomText(
                     text: 'a complain to discuss or an issue to',
-                    height: 16,
+                    height: 14,
                     color: Color(0xFFFFFFFF),
                     fontweight: FontWeight.bold,
                   ),
                   UiHelper.CustomText(
                     text: 'solve.',
-                    height: 16,
+                    height: 14,
                     color: Color(0xFFFFFFFF),
                     fontweight: FontWeight.bold,
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Container(
-                        height: 180,
-                        width: 180,
+                        height: 150,
+                        width: 150,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(22),
                           color: Color(0xFFFFFFFF),
@@ -281,9 +287,9 @@ class ContactUs extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width: 45,
-                              height: 45,
-                              padding: EdgeInsets.all(8),
+                              width: 40,
+                              height: 40,
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: Colors.black,
@@ -292,14 +298,14 @@ class ContactUs extends StatelessWidget {
                               child: Icon(
                                 Icons.phone,
                                 color: Color(0xFFFFFFFF),
-                                size: 25,
+                                size: 18,
                               ),
                             ),
-                            SizedBox(height: 20),
+                            SizedBox(height: 5),
                             Text(
                               'Call us',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 20,
                                 fontFamily: 'FontMain',
                                 fontWeight: FontWeight.bold,
                               ),
@@ -308,7 +314,7 @@ class ContactUs extends StatelessWidget {
                             Text(
                               'Our team is on the line',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 fontFamily: 'FontMain',
                               ),
                             ),
@@ -316,7 +322,7 @@ class ContactUs extends StatelessWidget {
                             Text(
                               'Mon-Fri  •  9-17',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 fontFamily: 'FontMain',
                               ),
                             ),
@@ -324,8 +330,8 @@ class ContactUs extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        height: 180,
-                        width: 180,
+                        height: 150,
+                        width: 150,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(22),
                           color: Color(0xFFFFFFFF),
@@ -334,9 +340,9 @@ class ContactUs extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              width: 50,
-                              height: 50,
-                              padding: EdgeInsets.all(8),
+                              width: 40,
+                              height: 40,
+                              padding: EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
                                 color: Colors.black,
@@ -345,14 +351,14 @@ class ContactUs extends StatelessWidget {
                               child: Icon(
                                 Icons.email_outlined,
                                 color: Color(0xFFFFFFFF),
-                                size: 30,
+                                size: 20,
                               ),
                             ),
-                            SizedBox(height: 20),
+                            SizedBox(height: 15),
                             Text(
                               'Email us',
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 18,
                                 fontFamily: 'FontMain',
                                 fontWeight: FontWeight.bold,
                               ),
@@ -361,7 +367,7 @@ class ContactUs extends StatelessWidget {
                             Text(
                               'Our team is on the line',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 fontFamily: 'FontMain',
                               ),
                             ),
@@ -369,7 +375,7 @@ class ContactUs extends StatelessWidget {
                             Text(
                               'Mon-Fri  •  9-17',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 12,
                                 fontFamily: 'FontMain',
                               ),
                             ),
@@ -378,20 +384,20 @@ class ContactUs extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   UiHelper.CustomText(
                     text: 'Create a ticket',
-                    height: 25,
+                    height: 18,
                     fontweight: FontWeight.w500,
                     color: Color(0xFFFFFFFF),
                   ),
                   UiHelper.CustomText(
                     text: 'Support Ticket',
-                    height: 16,
+                    height: 12,
                     fontweight: FontWeight.w500,
                     color: Color(0xFFFFFFFF),
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 10),
                   Padding(
                     padding: const EdgeInsets.all(10),
                     child: TextField(
@@ -415,7 +421,7 @@ class ContactUs extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: TextField(
                       keyboardType: TextInputType.multiline,
-                      maxLines: 5,
+                      maxLines: 3,
                       decoration: InputDecoration(
                         hintText: 'Enter your message',
                         border: OutlineInputBorder(
@@ -426,17 +432,13 @@ class ContactUs extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 8),
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(color: Colors.white, width: 1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      padding: EdgeInsets.symmetric(
-                        vertical: 10,
-                        horizontal: 30,
-                      ),
+                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                     ),
                     onPressed: () {},
                     child: Row(
@@ -445,12 +447,12 @@ class ContactUs extends StatelessWidget {
                         Icon(
                           Icons.attachment_sharp,
                           color: Colors.white,
-                          size: 30,
+                          size: 20,
                         ),
-                        SizedBox(width: 8),
+                        SizedBox(width: 5),
                         Text(
                           'Attach Image',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                         SizedBox(width: 2),
                         Text(
@@ -460,14 +462,14 @@ class ContactUs extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 140,
-                        vertical: 15,
+                        horizontal: 110,
+                        vertical: 10,
                       ),
-                      backgroundColor: Colors.blue.shade900,
+                      backgroundColor: Color(0xFF0E0882),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -482,7 +484,7 @@ class ContactUs extends StatelessWidget {
                       'Create Ticket',
                       style: TextStyle(
                         color: Color(0xFFFFFFFF),
-                        fontSize: 16,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'MainFont',
                       ),

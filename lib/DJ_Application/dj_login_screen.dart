@@ -45,25 +45,25 @@ class DjLoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Image.asset('assets/DJ/group.png', height: 143.5, width: 350),
-              SizedBox(height: 35),
+              SizedBox(height: 20),
               Image.asset(
                 'assets/DJ/_7b481d43-e709-49ac-97a6-6b936187f2f5-removebg-preview 1.png',
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Text(
                 'login Dj',
                 style: TextStyle(
                   color: Color(0XFFFFFFFF),
-                  fontSize: 30,
+                  fontSize: 25,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'FontMain',
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(5),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: '  Email',
@@ -81,7 +81,7 @@ class DjLoginScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(5),
                 child: TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -99,7 +99,6 @@ class DjLoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -117,13 +116,12 @@ class DjLoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 15),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 170, vertical: 15),
+                  padding: EdgeInsets.symmetric(horizontal: 140, vertical: 10),
                   backgroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(22),
                   ),
                 ),
                 onPressed: () {
@@ -141,7 +139,6 @@ class DjLoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -167,7 +164,7 @@ class DjLoginScreen extends StatelessWidget {
                         color: Color(0XFFFFFFFF),
                         fontWeight: FontWeight.w400,
                         fontFamily: 'FontMain',
-                        fontSize: 14,
+                        fontSize: 16,
                       ),
                     ),
                   ),

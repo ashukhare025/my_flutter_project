@@ -143,8 +143,8 @@ class CreateEvent extends StatelessWidget {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 140,
-                        vertical: 15,
+                        horizontal: 120,
+                        vertical: 10,
                       ),
                       backgroundColor: Colors.blue.shade900,
                       shape: RoundedRectangleBorder(

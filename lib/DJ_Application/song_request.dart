@@ -6,6 +6,7 @@ import 'Create_Event.dart';
 import 'contact_us.dart';
 import 'dj_profile.dart';
 import 'my_event_list.dart';
+import 'plan.dart';
 
 class SongRequest extends StatefulWidget {
   const SongRequest({super.key});
@@ -158,7 +159,12 @@ class _SongRequestState extends State<SongRequest> {
                   color: Color(0xFFFFFFFF),
                 ),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Plan()),
+                );
+              },
             ),
             Divider(thickness: 0),
             ListTile(
@@ -284,7 +290,7 @@ class _SongRequestState extends State<SongRequest> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -298,11 +304,11 @@ class _SongRequestState extends State<SongRequest> {
                         activeColor: Color(0XFF0E0882),
                         inactiveThumbColor: Color(0XFF0E0882),
                       ),
-                      SizedBox(width: 10),
+                      SizedBox(width: 5),
                       Text(
                         'Online',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'FontMain',
                           color: Color(0xFFFFFFFF),
@@ -317,11 +323,11 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/stranger.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
-                      SizedBox(width: 8),
+                      SizedBox(width: 2),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -331,7 +337,7 @@ class _SongRequestState extends State<SongRequest> {
                               style: TextStyle(
                                 fontFamily: 'FontMain',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 22,
+                                fontSize: 18,
                                 color: Color(0xFFFFFFFF),
                               ),
                             ),
@@ -343,19 +349,19 @@ class _SongRequestState extends State<SongRequest> {
                                     Text(
                                       'Jeane Lebras',
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         fontFamily: 'FontMain',
                                         color: Color(0xFFFFFFFF),
                                       ),
                                     ),
-                                    SizedBox(width: 105),
+                                    SizedBox(width: 100),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
                                         Text(
                                           'Accepted',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 12,
                                             fontFamily: 'FontMain',
                                             color: Color(0xFFFFFFFF),
                                           ),
@@ -370,7 +376,7 @@ class _SongRequestState extends State<SongRequest> {
                                     Text(
                                       'Left:5:45',
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         fontFamily: 'FontMain',
                                         color: Color(0xFFFFFFFF),
                                       ),
@@ -404,8 +410,8 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/takecare.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -474,8 +480,8 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/stranger.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -545,8 +551,8 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/takecare.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -615,8 +621,8 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/takecare.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -685,8 +691,8 @@ class _SongRequestState extends State<SongRequest> {
                       ClipRRect(
                         child: Image.asset(
                           'assets/DJ/stranger.jpg',
-                          width: 150,
-                          height: 150,
+                          width: 100,
+                          height: 100,
                         ),
                       ),
                       SizedBox(width: 8),
@@ -699,7 +705,7 @@ class _SongRequestState extends State<SongRequest> {
                               style: TextStyle(
                                 fontFamily: 'FontMain',
                                 fontWeight: FontWeight.bold,
-                                fontSize: 22,
+                                fontSize: 18,
                                 color: Color(0xFFFFFFFF),
                               ),
                             ),
@@ -713,17 +719,17 @@ class _SongRequestState extends State<SongRequest> {
                                     Text(
                                       'Jeane Lebras',
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         fontFamily: 'FontMain',
                                         color: Color(0xFFFFFFFF),
                                       ),
                                     ),
                                     CircleAvatar(
-                                      radius: 20,
+                                      radius: 18,
                                       backgroundColor: Color(0XFFFFFFFF),
                                       child: Icon(
                                         Icons.play_arrow,
-                                        size: 30,
+                                        size: 25,
                                         color: Color(0xFF0E0882),
                                       ),
                                     ),
@@ -735,7 +741,7 @@ class _SongRequestState extends State<SongRequest> {
                                     Text(
                                       '5:29',
                                       style: TextStyle(
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         fontFamily: 'FontMain',
                                         color: Color(0xFFFFFFFF),
                                       ),

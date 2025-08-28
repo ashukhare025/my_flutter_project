@@ -52,13 +52,13 @@ class _DjSplashState extends State<DjSplash> {
               children: [
                 Text(
                   'ENJOY PARTY WITH YOUR',
-                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 32),
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 24),
                 ),
               ],
             ),
             Text(
               'FAVOURITE TRACKS',
-              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 32),
+              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 24),
             ),
           ],
         ),

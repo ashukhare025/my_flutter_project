@@ -47,23 +47,23 @@ class _SignUpTv extends State<SignUpTv> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 20),
+              SizedBox(height: 25),
               Image.asset('assets/DJ/group.png'),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Image.asset(
                 'assets/DJ/_7b481d43-e709-49ac-97a6-6b936187f2f5-removebg-preview 1.png',
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 10),
               Text(
                 'Create Account',
                 style: TextStyle(
                   color: Color(0xFFFFFFFF),
                   fontWeight: FontWeight.w700,
-                  fontSize: 24,
+                  fontSize: 20,
                   fontFamily: 'FontMain',
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 15),
               Column(
                 children: [
                   Padding(
@@ -80,7 +80,7 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
@@ -96,7 +96,7 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
@@ -112,7 +112,7 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
@@ -127,7 +127,7 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
@@ -143,7 +143,7 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 10),
                   Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -161,7 +161,7 @@ class _SignUpTv extends State<SignUpTv> {
                           'Single User',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
-                            fontSize: 18,
+                            fontSize: 16,
                           ),
                         ),
                         SizedBox(width: 10),
@@ -179,7 +179,7 @@ class _SignUpTv extends State<SignUpTv> {
                           'Multi User',
                           style: TextStyle(
                             color: Color(0xFFFFFFFF),
-                            fontSize: 18,
+                            fontSize: 16,
                           ),
                         ),
                       ],
@@ -206,12 +206,12 @@ class _SignUpTv extends State<SignUpTv> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 10),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 160,
-                        vertical: 15,
+                        horizontal: 130,
+                        vertical: 10,
                       ),
                       backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
@@ -232,53 +232,55 @@ class _SignUpTv extends State<SignUpTv> {
                                 'Email Verification',
                                 style: TextStyle(
                                   color: Color(0XFFFFFFFF),
-                                  fontSize: 18,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'FontMain',
                                 ),
                               ),
                             ),
                             content: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                SizedBox(height: 20),
+                                SizedBox(height: 10),
                                 Text(
                                   'Enter 4 digit OTP to verify your email id,',
                                   style: TextStyle(
                                     fontFamily: 'FontMain',
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 13,
+                                    fontSize: 12,
                                     color: Color(0XFFFFFFFF),
                                   ),
+                                  maxLines: 1,
                                 ),
-                                SizedBox(height: 5),
+                                SizedBox(height: 2),
                                 Text(
                                   'Sent OTP at johnoe@gmail.com',
                                   style: TextStyle(
                                     fontFamily: 'FontMain',
                                     fontWeight: FontWeight.w700,
-                                    fontSize: 13,
+                                    fontSize: 12,
                                     color: Color(0XFFFFFFFF),
                                   ),
                                 ),
-                                SizedBox(height: 25),
+                                SizedBox(height: 10),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: List.generate(4, (index) {
                                     return SizedBox(
-                                      width: 60,
-                                      height: 80,
+                                      width: 50,
+                                      height: 60,
                                       child: TextField(
                                         textAlign: TextAlign.center,
-                                        maxLength: 1,
+                                        maxLength: 2,
                                         decoration: InputDecoration(
                                           counterText: "",
                                           filled: true,
                                           fillColor: Color(0XFFFFFFFF),
                                           border: OutlineInputBorder(
                                             borderRadius: BorderRadius.circular(
-                                              16,
+                                              12,
                                             ),
                                           ),
                                         ),
@@ -286,15 +288,16 @@ class _SignUpTv extends State<SignUpTv> {
                                     );
                                   }),
                                 ),
+                                SizedBox(height: 5),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     padding: EdgeInsets.symmetric(
-                                      horizontal: 110,
-                                      vertical: 15,
+                                      horizontal: 60,
+                                      vertical: 10,
                                     ),
                                     backgroundColor: Colors.blue.shade900,
                                     shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(34),
+                                      borderRadius: BorderRadius.circular(30),
                                     ),
                                   ),
                                   onPressed: () {
@@ -308,7 +311,7 @@ class _SignUpTv extends State<SignUpTv> {
                                   child: Text(
                                     'Submit',
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 14,
                                       fontFamily: 'FontMain',
                                       color: Colors.white,
                                     ),
@@ -327,18 +330,18 @@ class _SignUpTv extends State<SignUpTv> {
                         color: Color(0XFFFFFFFF),
                         fontWeight: FontWeight.w700,
                         fontFamily: 'FontMain',
-                        fontSize: 16,
+                        fontSize: 14,
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
+                  SizedBox(height: 5),
                   Text(
                     'Don’t have already account? Signup',
                     style: TextStyle(
                       color: Color(0XFFFFFFFF),
                       fontWeight: FontWeight.w400,
                       fontFamily: 'FontMain',
-                      fontSize: 14,
+                      fontSize: 13,
                     ),
                   ),
                 ],
