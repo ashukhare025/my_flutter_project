@@ -14,6 +14,9 @@ class MyEventScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Center(
+          child: Text('My Event List', style: TextStyle(color: Colors.white)),
+        ),
         backgroundColor: Color(0xFF14BBC6),
         leading: Builder(
           builder: (context) {

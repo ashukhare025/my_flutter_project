@@ -1,9 +1,94 @@
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-class DjProfile extends StatelessWidget {
+class DjProfile extends StatefulWidget {
   const DjProfile({super.key});
+
+  @override
+  State<DjProfile> createState() => _DjProfileState();
+}
+
+class _DjProfileState extends State<DjProfile> {
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController cityController = TextEditingController();
+
+  File? _image;
+  final ImagePicker _picker = ImagePicker();
+
+  Future<void> _pickImage(ImageSource source) async {
+    final pickedFile = await _picker.pickImage(source: source);
+    if (pickedFile != null) {
+      setState(() {
+        _image = File(pickedFile.path);
+      });
+    }
+  }
+
+  Future<bool> requestCameraPermission() async {
+    var status = await Permission.camera.request();
+    if (status.isGranted) {
+      return true;
+    } else if (status.isDenied) {
+      return false;
+    } else if (status.isPermanentlyDenied) {
+      openAppSettings();
+      return false;
+    }
+    return false;
+  }
+
+  Future<bool> requestGalleryPermission() async {
+    var status = await Permission.photos.request();
+    if (status.isGranted) {
+      print("Gallery permission granted");
+      return true;
+    } else if (status.isDenied) {
+      print("Gallery permission denied");
+      return false;
+    } else if (status.isPermanentlyDenied) {
+      print("Gallery permission permanently denied. Open app settings.");
+      openAppSettings();
+      return false;
+    }
+    return false;
+  }
+
+  void _showPickerOptions() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => SizedBox(
+        height: 130,
+        child: Column(
+          children: [
+            ListTile(
+              leading: Icon(Icons.camera),
+              title: Text("Camera"),
+              onTap: () async {
+                Navigator.pop(context);
+                var granted = await requestCameraPermission();
+                if (granted) _pickImage(ImageSource.camera);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.photo_library),
+              title: Text("Gallery"),
+              onTap: () async {
+                Navigator.pop(context);
+                var granted = await requestGalleryPermission();
+                if (granted) _pickImage(ImageSource.gallery);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,21 +123,28 @@ class DjProfile extends StatelessWidget {
                       CircleAvatar(
                         radius: 60,
                         backgroundColor: Colors.white,
-                        backgroundImage: AssetImage('assets/DJ/gamer.png'),
+                        backgroundImage: _image != null
+                            ? FileImage(_image!) as ImageProvider
+                            : AssetImage('assets/DJ/gamer.png'),
                       ),
                       Positioned(
                         bottom: 0,
                         right: 0,
-                        child: Container(
-                          padding: EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                          ),
-                          child: Icon(
-                            Icons.camera_alt_outlined,
-                            size: 30,
-                            color: Colors.black,
+                        child: GestureDetector(
+                          onTap: () {
+                            _showPickerOptions();
+                          },
+                          child: Container(
+                            padding: EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                            child: Icon(
+                              Icons.camera_alt_outlined,
+                              size: 30,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
@@ -66,6 +158,8 @@ class DjProfile extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
+                          keyboardType: TextInputType.text,
+                          controller: nameController,
                           decoration: InputDecoration(
                             hintText: 'Name',
                             border: OutlineInputBorder(
@@ -85,6 +179,7 @@ class DjProfile extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
                           keyboardType: TextInputType.text,
+                          controller: cityController,
                           decoration: InputDecoration(
                             hintText: 'City',
                             border: OutlineInputBorder(
@@ -104,6 +199,7 @@ class DjProfile extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
+                          controller: emailController,
                           decoration: InputDecoration(
                             hintText: 'E-mail',
                             border: OutlineInputBorder(
@@ -123,6 +219,7 @@ class DjProfile extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
                           keyboardType: TextInputType.phone,
+                          controller: phoneController,
                           decoration: InputDecoration(
                             hintText: 'Phone',
                             border: OutlineInputBorder(

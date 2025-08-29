@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_project/DJ_Application/sing_up.dart';
 import 'package:my_project/DJ_Application/splashscreen.dart';
 
+import 'Create_Event.dart';
 import 'my_event_list.dart';
 
 void main() {
@@ -45,7 +46,6 @@ class _DjLoginScreenState extends State<DjLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login'), backgroundColor: Color(0XFF14BBC6)),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -60,7 +60,7 @@ class _DjLoginScreenState extends State<DjLoginScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 50),
               Image.asset('assets/DJ/group.png', height: 143.5, width: 350),
               SizedBox(height: 20),
               Image.asset(
@@ -127,17 +127,25 @@ class _DjLoginScreenState extends State<DjLoginScreen> {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 140, vertical: 10),
-                  backgroundColor: Colors.blue,
+                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 15),
+                  backgroundColor: Color(0xFF0E0882),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(22),
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MyEventScreen()),
-                  );
+                  String email = emailController.text.trim();
+                  if (email.isNotEmpty) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyEventScreen()),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CreateEvent()),
+                    );
+                  }
                 },
                 child: Text(
                   'Sign In',
@@ -170,6 +178,8 @@ class _DjLoginScreenState extends State<DjLoginScreen> {
                     child: Text(
                       'Signup',
                       style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        decorationColor: Colors.white,
                         color: Color(0XFFFFFFFF),
                         fontWeight: FontWeight.w400,
                         fontFamily: 'FontMain',

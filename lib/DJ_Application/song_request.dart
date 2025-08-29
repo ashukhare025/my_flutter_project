@@ -88,23 +88,23 @@ class _SongRequestState extends State<SongRequest> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    minRadius: 40,
+                    minRadius: 30,
                     backgroundColor: Color(0xFF070180),
                     child: Text(
                       'MJ',
                       style: TextStyle(
                         color: Color(0xFFFFFFFF),
-                        fontSize: 30,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                         fontFamily: 'AntonSC',
                       ),
                     ),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: 8),
                   Text(
                     'MICHAL JOHNSON',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 14,
                       fontWeight: FontWeight.w400,
                       fontFamily: 'AntonSC',
                       color: Color(0xFFFFFFFF),
@@ -117,7 +117,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "My Event's",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -135,7 +135,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Create Event",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -153,7 +153,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Plan List",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -171,7 +171,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Song Request",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -189,7 +189,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Profile",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -207,7 +207,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Contact Us",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -225,7 +225,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "App Review",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -238,7 +238,7 @@ class _SongRequestState extends State<SongRequest> {
               title: Text(
                 "Term's & Condition",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 16,
                   fontWeight: FontWeight.w400,
                   fontFamily: 'FontMain',
                   color: Color(0xFFFFFFFF),
@@ -246,14 +246,14 @@ class _SongRequestState extends State<SongRequest> {
               ),
               onTap: () {},
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 25),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'App Version 3.2.1',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 16,
                     fontFamily: 'FontMain',
                     fontWeight: FontWeight.w300,
                     color: Color(0xFFFFFFFF),
