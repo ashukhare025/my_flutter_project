@@ -125,34 +125,45 @@ class _DjLoginScreenState extends State<DjLoginScreen> {
                   ),
                 ],
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 15),
-                  backgroundColor: Color(0xFF0E0882),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(22),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0XFF0E0882), Color(0xFF0B01BC)],
                   ),
+                  borderRadius: BorderRadius.circular(22),
                 ),
-                onPressed: () {
-                  String email = emailController.text.trim();
-                  if (email.isNotEmpty) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MyEventScreen()),
-                    );
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CreateEvent()),
-                    );
-                  }
-                },
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(
-                    color: Color(0XFFFFFFFF),
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'FontMain',
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 130,
+                      vertical: 15,
+                    ),
+                  ),
+                  onPressed: () {
+                    String email = emailController.text.trim();
+                    if (email.isNotEmpty) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MyEventScreen(),
+                        ),
+                      );
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CreateEvent()),
+                      );
+                    }
+                  },
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(
+                      color: Color(0XFFFFFFFF),
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'FontMain',
+                    ),
                   ),
                 ),
               ),

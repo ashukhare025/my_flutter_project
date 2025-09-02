@@ -237,122 +237,135 @@ class _SignUpTv extends State<SignUpTv> {
               ),
 
               SizedBox(height: 10),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 10),
-                  backgroundColor: Color(0xFF0E0882),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+              Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0XFF0E0882), Color(0xFF0B01BC)],
                   ),
+                  borderRadius: BorderRadius.circular(22),
                 ),
-                onPressed: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return AlertDialog(
-                        backgroundColor: Color(0XFF0A0568),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(22),
-                        ),
-                        title: Center(
-                          child: Text(
-                            'Email Verification',
-                            style: TextStyle(
-                              color: Color(0XFFFFFFFF),
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'FontMain',
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 130,
+                      vertical: 10,
+                    ),
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.transparent,
+                    shape: RoundedRectangleBorder(),
+                  ),
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          backgroundColor: Color(0XFF0A0568),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(22),
+                          ),
+                          title: Center(
+                            child: Text(
+                              'Email Verification',
+                              style: TextStyle(
+                                color: Color(0XFFFFFFFF),
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'FontMain',
+                              ),
                             ),
                           ),
-                        ),
-                        content: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            SizedBox(height: 10),
-                            Text(
-                              'Enter 4 digit OTP to verify your email id,',
-                              style: TextStyle(
-                                fontFamily: 'FontMain',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 10,
-                                color: Color(0XFFFFFFFF),
+                          content: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(height: 10),
+                              Text(
+                                'Enter 4 digit OTP to verify your email id,',
+                                style: TextStyle(
+                                  fontFamily: 'FontMain',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 10,
+                                  color: Color(0XFFFFFFFF),
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 2),
-                            Text(
-                              'Sent OTP at johnoe@gmail.com',
-                              style: TextStyle(
-                                fontFamily: 'FontMain',
-                                fontWeight: FontWeight.w700,
-                                fontSize: 10,
-                                color: Color(0XFFFFFFFF),
+                              SizedBox(height: 2),
+                              Text(
+                                'Sent OTP at johnoe@gmail.com',
+                                style: TextStyle(
+                                  fontFamily: 'FontMain',
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 10,
+                                  color: Color(0XFFFFFFFF),
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: List.generate(4, (index) {
-                                return SizedBox(
-                                  width: 50,
-                                  height: 60,
-                                  child: TextField(
-                                    textAlign: TextAlign.center,
-                                    maxLength: 2,
-                                    decoration: InputDecoration(
-                                      counterText: "",
-                                      filled: true,
-                                      fillColor: Color(0XFFFFFFFF),
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(12),
+                              SizedBox(height: 10),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: List.generate(4, (index) {
+                                  return SizedBox(
+                                    width: 50,
+                                    height: 60,
+                                    child: TextField(
+                                      textAlign: TextAlign.center,
+                                      maxLength: 2,
+                                      decoration: InputDecoration(
+                                        counterText: "",
+                                        filled: true,
+                                        fillColor: Color(0XFFFFFFFF),
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            12,
+                                          ),
+                                        ),
                                       ),
                                     ),
+                                  );
+                                }),
+                              ),
+                              SizedBox(height: 5),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 60,
+                                    vertical: 10,
                                   ),
-                                );
-                              }),
-                            ),
-                            SizedBox(height: 5),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 60,
-                                  vertical: 10,
+                                  backgroundColor: Colors.blue.shade900,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
                                 ),
-                                backgroundColor: Colors.blue.shade900,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => CreateEvent(),
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  'Submit',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontFamily: 'FontMain',
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => CreateEvent(),
-                                  ),
-                                );
-                              },
-                              child: Text(
-                                'Submit',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontFamily: 'FontMain',
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  );
-                },
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(
-                    color: Color(0XFFFFFFFF),
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'FontMain',
-                    fontSize: 14,
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      color: Color(0XFFFFFFFF),
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'FontMain',
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ),

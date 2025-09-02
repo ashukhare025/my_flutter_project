@@ -68,6 +68,7 @@ flutter:
     - assets/image/
     - assets/logo/
     - assets/DJ/
+    - assets/tikawoo/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -83,7 +84,11 @@ flutter:
   fonts:
     - family: FontMain
       fonts:
-        - asset: assets/fonts/Comfortaa-Bold.ttf
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+
+    - family: PopMain
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
    #   family:
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
