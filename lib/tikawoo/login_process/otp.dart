@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/widget/uihelper.dart';
 
-import 'custom_image.dart';
+import '../custom_image.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
@@ -17,7 +17,7 @@ class OtpScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 70),
+              SizedBox(height: 50),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,29 +27,31 @@ class OtpScreen extends StatelessWidget {
                   Image.asset(image.dummyy, height: 150, width: 140),
                 ],
               ),
-              Padding(padding: EdgeInsets.only(top: 20)),
-              Text(
-                'Enter Varification',
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Color(0xFF222741),
-                  fontFamily: 'FontMain',
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Enter Varification',
+                      style: TextStyle(
+                        fontSize: 28,
+                        color: Color(0xFF222741),
+                        fontFamily: 'FontMain',
+                      ),
+                    ),
+                    Text(
+                      'Code',
+                      style: TextStyle(
+                        fontFamily: 'FontMain',
+                        fontSize: 28,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Code',
-                    style: TextStyle(
-                      fontFamily: 'FontMain',
-                      fontSize: 28,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Center(
                 child: Text(
                   'We have sent a code to +91 7999098951',
@@ -61,7 +63,7 @@ class OtpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(4, (index) {
@@ -113,7 +115,7 @@ class OtpScreen extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0XFFF09308),
                         padding: EdgeInsets.symmetric(
-                          vertical: 18,
+                          vertical: 15,
                           horizontal: 135,
                         ),
                         shape: RoundedRectangleBorder(

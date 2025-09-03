@@ -1,28 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:my_project/tikawoo/sidemenu_screens/bank_details.dart';
 
-import 'custom_image.dart';
+import '../../whatsapp_series/home_page_screen.dart';
+import '../custom_image.dart';
 
-class CreateAccount extends StatefulWidget {
-  const CreateAccount({super.key});
+class CreateAccount2 extends StatefulWidget {
+  const CreateAccount2({super.key});
 
   @override
-  State<CreateAccount> createState() => _CreateAccountState();
+  State<CreateAccount2> createState() => _CreateAccount2State();
 }
 
-class _CreateAccountState extends State<CreateAccount> {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController dobController = TextEditingController();
-  final TextEditingController domController = TextEditingController();
+class _CreateAccount2State extends State<CreateAccount2> {
+  final TextEditingController address1Controller = TextEditingController();
+  final TextEditingController address2Controller = TextEditingController();
+  final TextEditingController countryController = TextEditingController();
+  final TextEditingController stateController = TextEditingController();
+  final TextEditingController cityController = TextEditingController();
+  final TextEditingController pincodeController = TextEditingController();
 
   @override
   void dispose() {
-    nameController.dispose();
-    emailController.dispose();
-    phoneController.dispose();
-    dobController.dispose();
-    domController.dispose();
+    address1Controller.dispose();
+    address2Controller.dispose();
+    countryController.dispose();
+    stateController.dispose();
+    cityController.dispose();
+    pincodeController.dispose();
     super.dispose();
   }
 
@@ -63,7 +67,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     height: 7,
                     width: 160,
                     decoration: BoxDecoration(
-                      color: Color(0XFFD9D9D9),
+                      color: Color(0XFFF09308),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -88,52 +92,15 @@ class _CreateAccountState extends State<CreateAccount> {
                   "Please fill in the form below to create an \naccount. Easy isn't it? ",
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Choose Type',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-                ),
-              ),
-              SizedBox(height: 5),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(width: 10),
-                  Image.asset('assets/tikawoo/Group48095954.png'),
-                  SizedBox(width: 40),
-                  Image.asset('assets/tikawoo/Group48095955.png'),
-                ],
-              ),
-              SizedBox(height: 3),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(width: 15),
-                  Text(
-                    'Carpenter',
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
-                  ),
-                  SizedBox(width: 65),
-                  Text(
-                    'Dealer',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                      fontFamily: "PopMain",
-                    ),
-                  ),
-                ],
-              ),
               SizedBox(height: 25),
               Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
-                      controller: nameController,
+                      controller: address1Controller,
                       decoration: InputDecoration(
-                        hintText: 'Your full name',
+                        hintText: 'Address Line 1',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -143,54 +110,18 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Container(
-                    width: 320,
-                    height: 60,
-                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFFFFFFF),
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: Colors.grey.shade300, width: 1),
-                    ),
-                    child: Row(
-                      children: [
-                        Text(
-                          "+91",
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: TextField(
+                      controller: address2Controller,
+                      decoration: InputDecoration(
+                        hintText: 'Address Line 2',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
                         ),
-                        SizedBox(width: 5),
-                        Row(
-                          children: [
-                            Image.asset(
-                              "assets/tikawoo/indian.png",
-                              height: 20,
-                              width: 20,
-                            ),
-                            Icon(Icons.arrow_drop_down, color: Colors.orange),
-                          ],
-                        ),
-                        SizedBox(width: 10),
-                        Container(
-                          height: 24,
-                          width: 1,
-                          color: Colors.grey.shade300,
-                        ),
-                        SizedBox(width: 12),
-                        Expanded(
-                          child: TextField(
-                            keyboardType: TextInputType.phone,
-                            controller: phoneController,
-                            decoration: InputDecoration(
-                              hintText: "Enter Your Mobile Number",
-                              border: InputBorder.none,
-                              hintStyle: TextStyle(color: Colors.grey),
-                            ),
-                          ),
-                        ),
-                      ],
+                        filled: true,
+                        fillColor: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                   SizedBox(height: 10),
@@ -198,9 +129,9 @@ class _CreateAccountState extends State<CreateAccount> {
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
                       keyboardType: TextInputType.emailAddress,
-                      controller: emailController,
+                      controller: countryController,
                       decoration: InputDecoration(
-                        hintText: 'Email',
+                        hintText: 'Country',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -213,12 +144,12 @@ class _CreateAccountState extends State<CreateAccount> {
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
-                      controller: phoneController,
+                      controller: stateController,
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
-                        hintText: 'Date of Birth',
+                        hintText: 'State',
                         suffixIcon: Icon(
-                          Icons.date_range,
+                          Icons.arrow_drop_down,
                           color: Color(0XFFF09308),
                         ),
                         border: OutlineInputBorder(
@@ -233,13 +164,13 @@ class _CreateAccountState extends State<CreateAccount> {
                   Padding(
                     padding: const EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
-                      controller: dobController,
+                      controller: cityController,
                       decoration: InputDecoration(
                         suffixIcon: Icon(
-                          Icons.date_range,
+                          Icons.arrow_drop_down,
                           color: Color(0XFFF09308),
                         ),
-                        hintText: 'Date of Marriage',
+                        hintText: 'City',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -248,15 +179,49 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
-                  Text(
-                    'I already have an account',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0XFF010124),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: TextField(
+                      controller: pincodeController,
+                      decoration: InputDecoration(
+                        suffixIcon: Icon(
+                          Icons.arrow_drop_down,
+                          color: Color(0XFFF09308),
+                        ),
+                        hintText: 'Pin Code',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        filled: true,
+                        fillColor: Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
+                  SizedBox(height: 40),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 150,
+                        vertical: 15,
+                      ),
+                      backgroundColor: Colors.orange,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BankDetails()),
+                      );
+                    },
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(fontSize: 12, color: Color(0xFFFFFFFF)),
+                    ),
+                  ),
+                  SizedBox(height: 20),
                 ],
               ),
             ],

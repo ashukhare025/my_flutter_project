@@ -89,6 +89,12 @@ flutter:
     - family: PopMain
       fonts:
         - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+    - family: Pop
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+    - family: PopMed
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
    #   family:
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

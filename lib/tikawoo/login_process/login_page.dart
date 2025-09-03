@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/tikawoo/custom_image.dart';
-import 'package:my_project/tikawoo/otp.dart';
+import 'package:my_project/tikawoo/login_process/otp.dart';
 
-import '../widget/uihelper.dart';
+import '../../widget/uihelper.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 70),
+              SizedBox(height: 60),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,38 +47,42 @@ class _LoginPageState extends State<LoginPage> {
                   Image.asset(image.dummyy, height: 150, width: 140),
                 ],
               ),
-              Padding(padding: EdgeInsets.only(top: 20)),
-              Text(
-                'Login',
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Color(0xFF222741),
-                  fontFamily: 'FontMain',
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Text(
+                  'Login',
+                  style: TextStyle(
+                    fontSize: 28,
+                    color: Color(0xFF222741),
+                    fontFamily: 'FontMain',
+                  ),
                 ),
               ),
-              SizedBox(height: 10),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Please Enter Your Mobile Number and',
-                    style: TextStyle(
-                      fontFamily: 'PopMain',
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Please Enter Your Mobile Number and',
+                      style: TextStyle(
+                        fontFamily: 'PopMain',
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Sign in Your Account',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      fontFamily: 'PopMain',
+                    Text(
+                      'Sign in Your Account',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        fontFamily: 'PopMain',
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 30),
               Center(
                 child: Container(
                   width: 320,
@@ -132,9 +136,10 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 165),
+              SizedBox(height: 220),
               Center(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(

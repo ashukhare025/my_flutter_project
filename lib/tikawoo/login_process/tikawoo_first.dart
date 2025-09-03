@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/tikawoo/create_account.dart';
+import 'package:my_project/tikawoo/sign_up_process/create_account.dart';
 import 'package:my_project/tikawoo/custom_image.dart';
-import 'package:my_project/tikawoo/login_page.dart';
-import 'package:my_project/tikawoo/spalsh.dart';
+import 'package:my_project/tikawoo/login_process/login_page.dart';
+import 'package:my_project/tikawoo/login_process/spalsh.dart';
 import 'package:my_project/widget/uihelper.dart';
 
 void main() {

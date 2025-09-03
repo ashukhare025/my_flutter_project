@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:my_project/tikawoo/custom_image.dart';
-import 'package:my_project/tikawoo/tikawoo_first.dart';
+import 'package:my_project/tikawoo/login_process/tikawoo_first.dart';
 
 class TwSplashScreen extends StatefulWidget {
   const TwSplashScreen({super.key});
