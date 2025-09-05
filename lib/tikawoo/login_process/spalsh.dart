@@ -30,7 +30,7 @@ class _TwSplashScreenState extends State<TwSplashScreen> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Color(0xFFFFFFFF),
+        color: Color(0XFFF5F6F7),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -44,7 +44,6 @@ class _TwSplashScreenState extends State<TwSplashScreen> {
                   Image.asset(image.dummyy, height: 200, width: 200),
                 ],
               ),
-
               Padding(
                 padding: EdgeInsets.only(bottom: 20),
                 child: Text(

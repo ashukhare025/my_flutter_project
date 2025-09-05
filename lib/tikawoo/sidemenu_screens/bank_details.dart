@@ -12,12 +12,12 @@ class BankDetails extends StatelessWidget {
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: CircleAvatar(
-            backgroundColor: const Color(0XFFF09308),
-            child: const Icon(Icons.arrow_back, color: Colors.white, size: 20),
+            backgroundColor: Color(0XFFF09308),
+            child: Icon(Icons.arrow_back, color: Colors.white, size: 20),
           ),
         ),
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Banks Details',
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
         ),
@@ -36,7 +36,7 @@ class BankDetails extends StatelessWidget {
                 child: Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8),
+                      padding: EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -182,7 +182,7 @@ class BankDetails extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 18, right: 18),
+                padding: EdgeInsets.only(left: 18, right: 18),
                 child: TextField(
                   decoration: InputDecoration(
                     suffixText: 'varified',
@@ -220,7 +220,7 @@ class BankDetails extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.only(left: 18, right: 18),
+                padding: EdgeInsets.only(left: 18, right: 18),
                 child: TextField(
                   decoration: InputDecoration(
                     suffixText: 'Rejected',
@@ -246,7 +246,7 @@ class BankDetails extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.only(left: 18, right: 18),
+                padding: EdgeInsets.only(left: 18, right: 18),
                 child: TextField(
                   decoration: InputDecoration(
                     suffixIcon: Icon(

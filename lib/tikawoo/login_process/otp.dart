@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/widget/uihelper.dart';
 
 import '../custom_image.dart';
 
@@ -28,7 +27,7 @@ class OtpScreen extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(5),
+                padding:  EdgeInsets.all(5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

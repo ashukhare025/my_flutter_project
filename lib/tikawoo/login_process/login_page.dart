@@ -17,8 +17,11 @@ class _LoginPageState extends State<LoginPage> {
   String? errorMessage;
 
   void checkPhoneNumber() {
+    final phone = phoneController.text.trim();
     setState(() {
-      if (phoneController.text != "7999098951") {
+      if (phone.isEmpty) {
+        errorMessage = 'Enter Your Mobile Number';
+      } else if (phone != "9724359185") {
         errorMessage = "This Mobile Number Not Registered";
       } else {
         errorMessage = null;
@@ -48,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(5),
+                padding:  EdgeInsets.all(5),
                 child: Text(
                   'Login',
                   style: TextStyle(
@@ -59,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(5.0),
+                padding:  EdgeInsets.all(5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -154,10 +157,14 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {
                         checkPhoneNumber();
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => OtpScreen()),
-                        );
+                        if (errorMessage == null) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => OtpScreen(),
+                            ),
+                          );
+                        }
                       },
                       child: Text(
                         'send OTP',

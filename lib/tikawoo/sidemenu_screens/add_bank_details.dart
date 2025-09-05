@@ -12,12 +12,12 @@ class AddBank extends StatelessWidget {
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: CircleAvatar(
-            backgroundColor: const Color(0XFFF09308),
-            child: const Icon(Icons.arrow_back, color: Colors.white, size: 20),
+            backgroundColor:  Color(0XFFF09308),
+            child:  Icon(Icons.arrow_back, color: Colors.white, size: 20),
           ),
         ),
         centerTitle: true,
-        title: const Text(
+        title:  Text(
           'Add Banks Details',
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
         ),
@@ -48,7 +48,7 @@ class AddBank extends StatelessWidget {
               Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    padding:  EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Account Holder Name',
@@ -62,7 +62,7 @@ class AddBank extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    padding:  EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: 'Bank A/C No',
@@ -76,7 +76,7 @@ class AddBank extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    padding:  EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
                       keyboardType: TextInputType.emailAddress,
 
@@ -92,7 +92,7 @@ class AddBank extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    padding:  EdgeInsets.only(left: 20, right: 20),
                     child: TextField(
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
@@ -109,7 +109,7 @@ class AddBank extends StatelessWidget {
               ),
               SizedBox(height: 15),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding:  EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   children: [
                     Expanded(
@@ -143,7 +143,7 @@ class AddBank extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(22),
+                padding:  EdgeInsets.all(22),
                 child: Row(
                   children: [
                     Text(
@@ -158,7 +158,7 @@ class AddBank extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                padding:  EdgeInsets.only(left: 20, right: 20),
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Enter Your UPI ID',

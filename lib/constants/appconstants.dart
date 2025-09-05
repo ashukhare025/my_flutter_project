@@ -10,4 +10,9 @@ class AppConstants {
   //
 
   static const String homeScreen = 'Home Screen';
+
+  static const String fontFamily_Roboto = "Roboto";
+  static const String fontFamily_Satoshi = "satoshi";
+  static const String fontFamily_Inter = "inter";
+  static const String fontFamily_Quicksand = "Quicksand";
 }

@@ -33,7 +33,7 @@ class _CreateAccountState extends State<CreateAccount> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Color(0XFFF5F6F7),
+        color: Color(0xFFD6D6D4),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

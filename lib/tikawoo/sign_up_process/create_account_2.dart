@@ -36,7 +36,7 @@ class _CreateAccount2State extends State<CreateAccount2> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Color(0XFFF5F6F7),
+        color: Color(0xFFD6D6D4),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -210,12 +210,7 @@ class _CreateAccount2State extends State<CreateAccount2> {
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => BankDetails()),
-                      );
-                    },
+                    onPressed: () {},
                     child: Text(
                       'Submit',
                       style: TextStyle(fontSize: 12, color: Color(0xFFFFFFFF)),

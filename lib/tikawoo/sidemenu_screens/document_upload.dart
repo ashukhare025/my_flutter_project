@@ -62,12 +62,12 @@ class _BankDetails2State extends State<BankDetails2> {
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: CircleAvatar(
-            backgroundColor: const Color(0XFFF09308),
-            child: const Icon(Icons.arrow_back, color: Colors.white, size: 20),
+            backgroundColor:  Color(0XFFF09308),
+            child:  Icon(Icons.arrow_back, color: Colors.white, size: 20),
           ),
         ),
         centerTitle: true,
-        title: const Text(
+        title:  Text(
           'Document Upload',
           style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
         ),
@@ -106,7 +106,7 @@ class _BankDetails2State extends State<BankDetails2> {
             Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding:  EdgeInsets.only(left: 20, right: 20),
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Pancard.PDF',
@@ -124,7 +124,7 @@ class _BankDetails2State extends State<BankDetails2> {
                 ),
                 SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding:  EdgeInsets.only(left: 20, right: 20),
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Bank Cheque',
@@ -142,7 +142,7 @@ class _BankDetails2State extends State<BankDetails2> {
                 ),
                 SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding:  EdgeInsets.only(left: 20, right: 20),
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
 
@@ -162,7 +162,7 @@ class _BankDetails2State extends State<BankDetails2> {
                 ),
                 SizedBox(height: 15),
                 Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  padding:  EdgeInsets.only(left: 20, right: 20),
                   child: TextField(
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
