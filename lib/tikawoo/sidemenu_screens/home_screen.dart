@@ -152,7 +152,6 @@ class PageHome extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 60),
                 ],
               ),
             ],
