@@ -12,8 +12,36 @@ class BottomBar extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: Padding(
             padding: EdgeInsets.all(8),
-            child: Column(children: [Text('Enter your info'),
-            ]
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                    'Enter your info',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  SizedBox(height: 10),
+                  TextField(
+                    decoration: InputDecoration(hintText: 'First Name'),
+                  ),
+                  SizedBox(height: 5),
+                  TextField(decoration: InputDecoration(hintText: 'Last Name')),
+                  SizedBox(height: 5),
+                  TextField(decoration: InputDecoration(hintText: 'Email')),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Text('Close'),
+                      ),
+                      ElevatedButton(onPressed: () {}, child: Text('Submit')),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );

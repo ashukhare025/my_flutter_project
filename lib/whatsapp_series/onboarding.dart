@@ -3,6 +3,8 @@ import 'package:my_project/whatsapp_series/login_screen.dart';
 import 'package:my_project/widget/uihelper.dart';
 
 class OnBoardingScreen extends StatelessWidget {
+  const OnBoardingScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
