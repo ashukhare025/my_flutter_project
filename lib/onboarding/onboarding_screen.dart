@@ -111,10 +111,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                       )
                     : Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: List.generate(onBoarding.length, (index) {
                           return AnimatedContainer(
-                            duration: Duration(microseconds: 200),
+                            duration: Duration(milliseconds: 200),
                             height: 10,
                             width: (index == currentPage) ? 15 : 10,
                             margin: EdgeInsets.symmetric(horizontal: 5),
