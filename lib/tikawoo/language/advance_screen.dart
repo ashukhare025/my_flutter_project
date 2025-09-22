@@ -235,7 +235,11 @@ class AdvanceScreen extends StatelessWidget {
                   Expanded(
                     child: Text(
                       "Language",
-                      style: TextStyle(fontSize: 14, color: Colors.grey,fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   Text("Automatic", style: TextStyle(color: Colors.grey)),

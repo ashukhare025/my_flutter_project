@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_project/E-comm%20Application/details.dart';
+import 'package:my_project/E-comm%20Application/e_profile.dart';
+import 'package:my_project/E-comm%20Application/favorite.dart';
+import 'package:my_project/E-comm%20Application/my_cart.dart';
+import 'package:my_project/E-comm%20Application/notification.dart';
 import 'package:my_project/E-comm%20Application/side_drawer.dart';
 
 class EcommHome extends StatefulWidget {
@@ -32,6 +37,13 @@ class _EcommHomeState extends State<EcommHome> {
   ];
 
   int currentValue = 0;
+
+  final ListScreen = [
+    EcommFavorite(),
+    EcommCart(),
+    EcommNotification(),
+    EcommProfile(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -207,7 +219,14 @@ class _EcommHomeState extends State<EcommHome> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(bottom: 2),
                                   child: IconButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => EcommDetails(),
+                                        ),
+                                      );
+                                    },
                                     icon: Icon(
                                       Icons.add,
                                       color: Color(0XFF5B9EE1),

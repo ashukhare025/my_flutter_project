@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 
-class EcommAccountScreen extends StatelessWidget {
+class EcommAccountScreen extends StatefulWidget {
   const EcommAccountScreen({super.key});
+
+  @override
+  State<EcommAccountScreen> createState() => _EcommAccountScreenState();
+}
+
+class _EcommAccountScreenState extends State<EcommAccountScreen> {
+  bool isSwitched = false;
+  bool isSwitch = false;
+  bool isOn = true;
+  bool isButtonOn = true;
 
   @override
   Widget build(BuildContext context) {
@@ -168,6 +178,114 @@ class EcommAccountScreen extends StatelessWidget {
                 child: Text(
                   "App Settings",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        "Enable Face ID For Log In",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF1A2530),
+                        ),
+                      ),
+                    ),
+                    Switch(
+                      value: isSwitched,
+                      onChanged: (value) {
+                        setState(() {
+                          isSwitched = value;
+                        });
+                      },
+                      activeColor: Color(0xFF5B9EE1),
+                      inactiveThumbColor: Color(0xFFFFFFFF),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        "Enable Push Notification",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF1A2530),
+                        ),
+                      ),
+                    ),
+                    Switch(
+                      value: isButtonOn,
+                      onChanged: (value) {
+                        setState(() {
+                          isButtonOn = value;
+                        });
+                      },
+                      activeColor: Color(0xFF5B9EE1),
+                      inactiveThumbColor: Color(0xFFFFFFFF),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        "Enable Location Services",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF1A2530),
+                        ),
+                      ),
+                    ),
+                    Switch(
+                      value: isOn,
+                      onChanged: (value) {
+                        setState(() {
+                          isOn = value;
+                        });
+                      },
+                      activeColor: Color(0xFF5B9EE1),
+                      inactiveThumbColor: Color(0xFFFFFFFF),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  children: [
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        "Dark Mode",
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Color(0xFF1A2530),
+                        ),
+                      ),
+                    ),
+                    Switch(
+                      value: isSwitch,
+                      onChanged: (value) {
+                        setState(() {
+                          isSwitch = value;
+                        });
+                      },
+                      activeColor: Color(0xFF5B9EE1),
+                      inactiveThumbColor: Color(0xFFFFFFFF),
+                    ),
+                  ],
                 ),
               ),
             ],
