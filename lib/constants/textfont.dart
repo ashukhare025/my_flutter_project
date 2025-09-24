@@ -177,3 +177,16 @@ final TextPoppinsSemiBoldFont = TextStyle(
   fontSize: 14,
   color: AppColors.colorGreenText,
 );
+final TextPopponsFont = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 13,
+  fontFamily: AppConstants.fontFamily_Poppins,
+  color: AppColors.colorWhite,
+);
+
+final TextPTSerif = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontFamily: AppConstants.fontFamily_PTSerif,
+  fontSize: 20,
+  color: AppColors.colorWhite,
+);

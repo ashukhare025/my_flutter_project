@@ -58,7 +58,7 @@ class BlinkitCart extends StatelessWidget {
                         ScreenHelper.CustomTaxt(
                           text: "- Ashu, Shrinath Vihar, indore",
                           color: Color(0XFF000000),
-                          fontweight: FontWeight.bold,
+                          fontweight: FontWeight.w400,
                           fontsize: 14,
                           fontfamily: AppConstants.fontFamily_Poppins,
                         ),
