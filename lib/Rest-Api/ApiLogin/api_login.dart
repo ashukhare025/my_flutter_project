@@ -2,7 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:my_project/ApiLogin/api_profile.dart';
+
+import 'api_profile.dart';
+
 
 class ApiLoginScreen extends StatefulWidget {
   const ApiLoginScreen({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/Api/Get%20APi/view_get_api.dart';
+import 'package:my_project/Rest-Api/Api/Get%20APi/view_get_api.dart';
 
 void main() {
   runApp(GetMain());
@@ -11,7 +11,7 @@ class GetMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FLutter',
+      title: 'Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
       home: ViewGetApiScreen(),

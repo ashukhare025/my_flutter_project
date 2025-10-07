@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/Api/api_services/api_services.dart';
-import 'package:my_project/Api/models/get_users_list.dart';
+
+import '../api_services/api_services.dart';
+import '../models/get_users_list.dart';
 
 class ViewGetApiScreen extends StatefulWidget {
   const ViewGetApiScreen({super.key});
