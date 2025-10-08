@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/firebase_series/FireBaseLoginSign/firebase_login.dart';
-import 'package:my_project/firebase_series/FireBaseLoginSign/firebase_login_home_screen.dart';
+
+import 'firebase_login.dart';
+import 'firebase_login_home_screen.dart';
 
 class FireBaseSplash extends StatefulWidget {
   const FireBaseSplash({super.key});

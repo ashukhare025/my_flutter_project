@@ -1,7 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/firebase_series/firebase%20database/update_user.dart';
-import 'package:my_project/firebase_series/firebase%20database/user_screen.dart';
+import 'package:my_project/firebase/firebase%20database/update_user.dart';
+import 'package:my_project/firebase/firebase%20database/user_screen.dart';
+
 
 class FireBaseHome extends StatefulWidget {
   const FireBaseHome({super.key});

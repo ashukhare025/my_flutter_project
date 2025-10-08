@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/firebase_series/FireBaseLoginSign/firebase_login.dart';
+
+import 'firebase_login.dart';
 
 class FirebaseLoginHomeScreen extends StatefulWidget {
   const FirebaseLoginHomeScreen({super.key});

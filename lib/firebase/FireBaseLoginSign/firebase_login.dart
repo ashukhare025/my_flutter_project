@@ -1,37 +1,76 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/firebase_series/FireBaseLoginSign/firebase_login.dart';
-import 'package:my_project/firebase_series/FireBaseLoginSign/firebase_login_home_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:my_project/firebase/FireBaseLoginSign/register_screen.dart';
 
-class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
+import 'firebase_forgot_password.dart';
+import 'firebase_login_home_screen.dart';
+
+
+class FireBaseLoginScreen extends StatefulWidget {
+  const FireBaseLoginScreen({super.key});
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  State<FireBaseLoginScreen> createState() => _FireBaseLoginScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
-  TextEditingController name = TextEditingController();
+class _FireBaseLoginScreenState extends State<FireBaseLoginScreen> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   FirebaseAuth auth = FirebaseAuth.instance;
-
   bool loading = false;
 
-  void registerNow() async {
+  void loginNow() async {
     setState(() {
       loading = true;
     });
     try {
-      await auth.createUserWithEmailAndPassword(
+      await auth.signInWithEmailAndPassword(
         email: email.text,
         password: password.text,
       );
-      Navigator.push(
+
+      Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (context) => FirebaseLoginHomeScreen()),
+        (value) => false,
+      );
+      // Navigator.pushReplacement(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => FirebaseLoginHomeScreen()),
+      // );
+    } catch (e) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(e.toString())));
+    } finally {
+      setState(() {
+        loading = false;
+      });
+    }
+  }
+
+  void continueWithGoogle() async {
+    String webClientId =
+        '195877756947-fgc0n6j0nnrc2d68nf66fqq30atenhrq.apps.googleusercontent.com';
+    try {
+      GoogleSignIn signIn = GoogleSignIn.instance;
+      await signIn.initialize(serverClientId: webClientId);
+      GoogleSignInAccount account = await signIn.authenticate();
+      GoogleSignInAuthentication googleAuth = account.authentication;
+      final credential = GoogleAuthProvider.credential(
+        idToken: googleAuth.idToken,
+      );
+
+      setState(() {
+        loading = true;
+      });
+      await auth.signInWithCredential(credential);
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => FirebaseLoginHomeScreen()),
+        (value) => false,
       );
     } catch (e) {
       ScaffoldMessenger.of(
@@ -50,33 +89,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: loading
           ? Center(child: CircularProgressIndicator())
           : Form(
-              key: formkey,
               child: ListView(
                 padding: EdgeInsets.all(15),
                 children: [
                   SizedBox(height: 50),
                   Text(
-                    'Register Here,',
+                    'Login Here,',
                     style: Theme.of(context).textTheme.headlineLarge,
                   ),
                   SizedBox(height: 50),
-                  TextFormField(
-                    controller: name,
-                    decoration: InputDecoration(hintText: 'Name'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter name';
-                      }
-                      return null;
-                    },
-                  ),
-                  SizedBox(height: 20),
                   TextFormField(
                     controller: email,
                     decoration: InputDecoration(hintText: 'Email'),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter email';
+                        return 'Please enter name';
                       }
                       return null;
                     },
@@ -95,13 +122,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
-                      if (formkey.currentState!.validate()) {
-                        registerNow();
-                      }
+                      loginNow();
                     },
-                    child: Text('Register'),
+                    child: Text('Login'),
                   ),
                   SizedBox(height: 20),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FireBaseForgotPassword(),
+                        ),
+                      );
+                    },
+                    child: Text('Forgot Password?'),
+                  ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: continueWithGoogle,
+                    child: Text('Continue with google'),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -111,11 +152,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FireBaseLoginScreen(),
+                              builder: (context) => RegisterScreen(),
                             ),
                           );
                         },
-                        child: Text('Login Now'),
+                        child: Text('Register Now'),
                       ),
                     ],
                   ),

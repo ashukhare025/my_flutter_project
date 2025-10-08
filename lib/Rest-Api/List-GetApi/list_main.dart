@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'listapihome.dart';
 
-
-
 void main() {
   runApp(ListApiScreen());
 }

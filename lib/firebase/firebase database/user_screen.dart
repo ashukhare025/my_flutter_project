@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/firebase_series/firebase%20database/base_main.dart';
 
 class UserScreen extends StatefulWidget {
   const UserScreen({super.key});
