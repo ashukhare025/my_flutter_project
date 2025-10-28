@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/Instagram-Application/Widget/uiwidget.dart';
 
+import '../Bottom-Navigation/bottomnav.dart';
 import '../SingUp/insta_signup.dart';
 
 class InstaLoginScreen extends StatefulWidget {
@@ -49,7 +50,15 @@ class _InstaLoginScreenState extends State<InstaLoginScreen> {
               ],
             ),
             SizedBox(height: 10),
-            UiWidget.customButton(callback: () {}, buttonname: 'Login'),
+            UiWidget.customButton(
+              callback: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => InstaBottomScreen()),
+                );
+              },
+              buttonname: 'Login',
+            ),
             SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
