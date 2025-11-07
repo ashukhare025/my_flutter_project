@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_project/Localization/providers/app_provider.dart';
-import 'package:my_project/l10n/app_localizations.dart';
+
+import '../../l10n/app_localizations.dart';
 
 class LocalHomeScreen extends StatelessWidget {
   const LocalHomeScreen({super.key});
