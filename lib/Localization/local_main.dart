@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_project/Localization/providers/app_provider.dart';
 import 'package:my_project/Localization/screen/home/home_screen.dart';
 import 'package:provider/provider.dart';
-import 'l10n/app_localizations.dart';
+
+import '../l10n/app_localizations.dart';
+
 
 void main() {
   runApp(LocalMain());
