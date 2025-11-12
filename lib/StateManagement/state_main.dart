@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_project/StateManagement/Providers/counter_provider.dart';
 import 'package:my_project/StateManagement/Providers/list_map_provider.dart';
-import 'package:my_project/StateManagement/screen/home/state_home_screen.dart';
 import 'package:provider/provider.dart';
-
 import 'screen/List/list_page.dart';
 
 void main() {
